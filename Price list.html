@@ -20,17 +20,38 @@
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
-    <a style="padding-right: 20px;" href="Home.html">Home</a>
-    <a style="padding-right: 20px;" href="About.html">About</a>
-    <a style="padding-right: 20px;" href="Services.html">Services</a>
-    <a style="padding-right: 20px;" href="Price list.html">Price list</a>
-    <a style="padding-right: 20px;" href="Contact us.html">Contact us</a>    
+    <a class="nav-link" style="padding-right: 20px;" href="Home.html">Home</a>
+    <a class="nav-link" style="padding-right: 20px;" href="About.html">About</a>
+    <a class="nav-link" style="padding-right: 20px;" href="Services.html">Services</a>
+    <a class="nav-link" style="padding-right: 20px;" href="Price list.html">Price list</a>
+    <a class="nav-link" style="padding-right: 20px;" href="Contact us.html">Contact us</a>    
 </div>
 
 <h1 style="font-size:50px; text-align:center" class="main-heading">Our Prices</h1>
-<p class="main-paragraph"><div style="text-align: center; margin-top: 40px;">
+<div id="price-section" style="text-align: center;margin-top: 40px; cursor: pointer;">
+    <p>
     Mobile Freezer: R650,00 p/d<br>VIP Toilets: R2 500,00 p/d<br>Pole-Tents(combo): R3 500,00(For the duration of the service)<br>Meat Cutting Services: R200 p/kg <p></div>   
-</p>
+    </p>
+</div>
+
+<script>
+    const dateDisplay= document.getElementById('dateDisplay');
+    const today = new Date(03/06/25);
+    const  options={weekday:'long', year: 'numeric', month: 'long', day: 'numeric'};
+    dateDisplay.textContent="Today is:"+ today.toLocaleDateString('en-ZA', options);
+
+    const priceSection=document.getElementById('price-section');
+    priceSection.addEventListener('click',function() {
+        alert("You're viewing our latest daily prices as of"+ today.toLocaleDateString());
+    });
+
+    const links= document.querySelectorAll('.nav-link');
+    links.forEach(link=>
+        window.location.href.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    
+</script>
     
 </body>
 </html>

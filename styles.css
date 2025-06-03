@@ -69,7 +69,8 @@ contact-paragraph {
     font-family: sans-serif;
 }
 
-nav a {
+nav a
+ {
     padding-right: 20px;
     text-decoration: none;
     color: black;
